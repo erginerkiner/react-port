@@ -1,91 +1,42 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
+import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { BsCodeSquare } from 'react-icons/bs';
+import { AiFillTwitterCircle, AiFillLinkedin, AiFillFacebook } from 'react-icons/ai';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main className=' bg-orange-100 px-10'>
+     <section className='min-h-screen'>
+      <nav className='p-10 mb-12 flex justify-between'>
+        <h1 className=' text-base flex items-center text-black'><BsCodeSquare className=' text-black text-2xl flex items-center mr-2'  /> ergin</h1>
+        <ul className='flex items-center'>
+<li><BsFillMoonStarsFill className=' text-black cursor-pointer text-2xl'/></li>
+<li><a className=' bg-gradient-to-r from-green-400 to-orange-400 text-white p-4 rounded-md ml-4' href='#'>Resume</a></li>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+        </ul>
+      </nav>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+    <div className='text-center p-10'>
+    <h2 className=' text-5xl py-2 text-black font-medium mx-auto'>ergin erkiner</h2>
+      <h3 className=' text-2xl py-2 text-gray-500'>web developer and designer</h3>
+        <p className=' text-md py-5 leading-8 text-gray-700'>lorem ipsum asdasdas adsdlasdlasldas lasdlasdla</p>
+    </div>
+    <div className=' text-5xl justify-center flex gap-14 py-3 text-gray-500'>
+      <AiFillTwitterCircle />
+      <AiFillLinkedin />
+      <AiFillFacebook />
+    </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
+    <div>
+      <Image />
+    </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+     </section>
     </main>
-  )
+  );
 }
